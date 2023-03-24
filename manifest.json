@@ -16,9 +16,9 @@
 			"iconUrl": "https://storage.googleapis.com/customtable/logo.png",
 			"description": "Hosted Version of CustomTable",
 			"resource": {
-				"js": "./customtable.js",
-				"config": "./customtable.json",
-				"css": "./customtable.css"
+				"js": "https://rahulkumarvarlekar.github.io/LookerChart/customtable.js",
+				"config": "https://rahulkumarvarlekar.github.io/LookerChart/customtable.json",
+				"css": "https://rahulkumarvarlekar.github.io/LookerChart/customtable.css"
 			}
 		}
 	]

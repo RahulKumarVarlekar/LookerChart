@@ -1,0 +1,695 @@
+{
+	"data": [
+		{
+			"id": "concepts",
+			"label": "Table Data",
+			"elements": [
+				{
+					"id": "Dimension",
+					"label": "Dimension",
+					"type": "DIMENSION",
+					"options": {
+						"min": 1
+					}
+				},
+				{
+					"id": "Metric",
+					"label": "Metric",
+					"type": "METRIC",
+					"options": {
+						"min": 0
+					}
+				}
+			]
+		}
+	],
+	"style": [
+		{
+			"id": "mainsettings",
+			"label": "Main Settings",
+			"elements": [
+				{
+					"id": "languagesettings",
+					"label": "Language Format",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "browser",
+					"options": [
+						{ "label": "use Browser Settings", "value": "browser" },
+						{ "label": "af", "value": "af" },
+						{ "label": "sq", "value": "sq" },
+						{ "label": "ar-SA", "value": "ar-SA" },
+						{ "label": "ar-IQ", "value": "ar-IQ" },
+						{ "label": "ar-EG", "value": "ar-EG" },
+						{ "label": "ar-LY", "value": "ar-LY" },
+						{ "label": "ar-DZ", "value": "ar-DZ" },
+						{ "label": "ar-MA", "value": "ar-MA" },
+						{ "label": "ar-TN", "value": "ar-TN" },
+						{ "label": "ar-OM", "value": "ar-OM" },
+						{ "label": "ar-YE", "value": "ar-YE" },
+						{ "label": "ar-SY", "value": "ar-SY" },
+						{ "label": "ar-JO", "value": "ar-JO" },
+						{ "label": "ar-LB", "value": "ar-LB" },
+						{ "label": "ar-KW", "value": "ar-KW" },
+						{ "label": "ar-AE", "value": "ar-AE" },
+						{ "label": "ar-BH", "value": "ar-BH" },
+						{ "label": "ar-QA", "value": "ar-QA" },
+						{ "label": "eu", "value": "eu" },
+						{ "label": "bg", "value": "bg" },
+						{ "label": "be", "value": "be" },
+						{ "label": "ca", "value": "ca" },
+						{ "label": "zh-TW", "value": "zh-TW" },
+						{ "label": "zh-CN", "value": "zh-CN" },
+						{ "label": "zh-HK", "value": "zh-HK" },
+						{ "label": "zh-SG", "value": "zh-SG" },
+						{ "label": "hr", "value": "hr" },
+						{ "label": "cs", "value": "cs" },
+						{ "label": "da", "value": "da" },
+						{ "label": "nl", "value": "nl" },
+						{ "label": "nl-BE", "value": "nl-BE" },
+						{ "label": "en", "value": "en" },
+						{ "label": "en-US", "value": "en-US" },
+						{ "label": "en-EG", "value": "en-EG" },
+						{ "label": "en-AU", "value": "en-AU" },
+						{ "label": "en-GB", "value": "en-GB" },
+						{ "label": "en-CA", "value": "en-CA" },
+						{ "label": "en-NZ", "value": "en-NZ" },
+						{ "label": "en-IE", "value": "en-IE" },
+						{ "label": "en-ZA", "value": "en-ZA" },
+						{ "label": "en-JM", "value": "en-JM" },
+						{ "label": "en-BZ", "value": "en-BZ" },
+						{ "label": "en-TT", "value": "en-TT" },
+						{ "label": "et", "value": "et" },
+						{ "label": "fo", "value": "fo" },
+						{ "label": "fa", "value": "fa" },
+						{ "label": "fi", "value": "fi" },
+						{ "label": "fr", "value": "fr" },
+						{ "label": "fr-BE", "value": "fr-BE" },
+						{ "label": "fr-CA", "value": "fr-CA" },
+						{ "label": "fr-CH", "value": "fr-CH" },
+						{ "label": "fr-LU", "value": "fr-LU" },
+						{ "label": "gd", "value": "gd" },
+						{ "label": "gd-IE", "value": "gd-IE" },
+						{ "label": "de", "value": "de" },
+						{ "label": "de-CH", "value": "de-CH" },
+						{ "label": "de-AT", "value": "de-AT" },
+						{ "label": "de-LU", "value": "de-LU" },
+						{ "label": "de-LI", "value": "de-LI" },
+						{ "label": "el", "value": "el" },
+						{ "label": "he", "value": "he" },
+						{ "label": "hi", "value": "hi" },
+						{ "label": "hu", "value": "hu" },
+						{ "label": "is", "value": "is" },
+						{ "label": "id", "value": "id" },
+						{ "label": "it", "value": "it" },
+						{ "label": "it-CH", "value": "it-CH" },
+						{ "label": "ja", "value": "ja" },
+						{ "label": "ko", "value": "ko" },
+						{ "label": "lv", "value": "lv" },
+						{ "label": "lt", "value": "lt" },
+						{ "label": "mk", "value": "mk" },
+						{ "label": "mt", "value": "mt" },
+						{ "label": "no", "value": "no" },
+						{ "label": "pl", "value": "pl" },
+						{ "label": "pt-BR", "value": "pt-BR" },
+						{ "label": "pt", "value": "pt" },
+						{ "label": "rm", "value": "rm" },
+						{ "label": "ro", "value": "ro" },
+						{ "label": "ro-MO", "value": "ro-MO" },
+						{ "label": "ru", "value": "ru" },
+						{ "label": "ru-MI", "value": "ru-MI" },
+						{ "label": "sz", "value": "sz" },
+						{ "label": "sr", "value": "sr" },
+						{ "label": "sk", "value": "sk" },
+						{ "label": "sl", "value": "sl" },
+						{ "label": "sb", "value": "sb" },
+						{ "label": "es", "value": "es" },
+						{ "label": "es-AR", "value": "es-AR" },
+						{ "label": "es-GT", "value": "es-GT" },
+						{ "label": "es-CR", "value": "es-CR" },
+						{ "label": "es-PA", "value": "es-PA" },
+						{ "label": "es-DO", "value": "es-DO" },
+						{ "label": "es-MX", "value": "es-MX" },
+						{ "label": "es-VE", "value": "es-VE" },
+						{ "label": "es-CO", "value": "es-CO" },
+						{ "label": "es-PE", "value": "es-PE" },
+						{ "label": "es-EC", "value": "es-EC" },
+						{ "label": "es-CL", "value": "es-CL" },
+						{ "label": "es-UY", "value": "es-UY" },
+						{ "label": "es-PY", "value": "es-PY" },
+						{ "label": "es-BO", "value": "es-BO" },
+						{ "label": "es-SV", "value": "es-SV" },
+						{ "label": "es-HN", "value": "es-HN" },
+						{ "label": "es-NI", "value": "es-NI" },
+						{ "label": "es-PR", "value": "es-PR" },
+						{ "label": "sx", "value": "sx" },
+						{ "label": "sv", "value": "sv" },
+						{ "label": "sv-FI", "value": "sv-FI" },
+						{ "label": "th", "value": "th" },
+						{ "label": "ts", "value": "ts" },
+						{ "label": "tn", "value": "tn" },
+						{ "label": "tr", "value": "tr" },
+						{ "label": "uk", "value": "uk" },
+						{ "label": "ur", "value": "ur" },
+						{ "label": "ve", "value": "ve" },
+						{ "label": "vi", "value": "vi" },
+						{ "label": "xh", "value": "xh" },
+						{ "label": "ji", "value": "ji" },
+						{ "label": "zu", "value": "zu" }
+					]
+				},
+				{
+					"id": "textmissing",
+					"label": "Show Missing Values as",
+					"defaultValue": "0",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "sortable",
+					"label": "Sortable Columns",
+					"defaultValue": true,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "transpose",
+					"label": "Transpose table",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "tablerows",
+					"label": "Rows per Page",
+					"defaultValue": 100,
+					"type": "INTERVAL"
+				}
+			]
+		},
+		{
+			"id": "styles",
+			"label": "Style Settings",
+			"elements": [
+				{
+					"id": "fontsizeheader",
+					"label": "Table Header Font Size",
+					"defaultValue": 14,
+					"type": "FONT_SIZE"
+				},
+				{
+					"id": "fontfamheader",
+					"label": "Table Header Font Family",
+					"type": "FONT_FAMILY"
+				},
+				{
+					"id": "themeAccentFillColor",
+					"label": "Header Background Color",
+					"type": "FILL_COLOR"
+				},
+				{
+					"id": "themeAccentFontColor",
+					"label": "Header Font Color",
+					"type": "FONT_COLOR"
+				},
+
+				{
+					"id": "fontsizebody",
+					"label": "Table Body Font Size",
+					"defaultValue": 12,
+					"type": "FONT_SIZE"
+				},
+				{
+					"id": "fontfambody",
+					"label": "Table Body Font Family",
+					"type": "FONT_FAMILY"
+				},
+				{
+					"id": "themeFontColor",
+					"label": "Body Font Color",
+					"type": "FONT_COLOR"
+				},
+
+				{
+					"id": "themeGridColor",
+					"label": "Cell Border Color",
+					"type": "FILL_COLOR"
+				},
+				{
+					"id": "oddRowColor",
+					"label": "Odd Row Background Color",
+					"type": "FILL_COLOR"
+				},
+				{
+					"id": "evenRowColor",
+					"label": "Even Row Background Color",
+					"type": "FILL_COLOR"
+				},
+
+				{
+					"id": "dimensionalign",
+					"label": "Align Dimensions",
+					"type": "SELECT_RADIO",
+					"defaultValue": "left",
+					"options": [
+						{ "label": "left", "value": "left" },
+						{ "label": "center", "value": "center" },
+						{ "label": "right", "value": "right" }
+					]
+				},
+				{
+					"id": "metricalign",
+					"label": "Align Metrics",
+					"type": "SELECT_RADIO",
+					"defaultValue": "right",
+					"options": [
+						{ "label": "left", "value": "left" },
+						{ "label": "center", "value": "center" },
+						{ "label": "right", "value": "right" }
+					]
+				},
+				{
+					"id": "comparisonalign",
+					"label": "Align Comparisons",
+					"type": "SELECT_RADIO",
+					"defaultValue": "center",
+					"options": [
+						{ "label": "left", "value": "left" },
+						{ "label": "center", "value": "center" },
+						{ "label": "right", "value": "right" }
+					]
+				}
+			]
+		},
+		{
+			"id": "decimalprecision",
+			"label": "Decimal Precision Settings",
+			"elements": [
+				{
+					"id": "decprecpercent",
+					"label": "Percent default Decimal Precision",
+					"defaultValue": 1,
+					"type": "INTERVAL",
+					"options": [
+						{
+							"max": 10,
+							"min": 0
+						}
+					]
+				},
+				{
+					"id": "decprecnumber",
+					"label": "Number default Decimal Precision",
+					"defaultValue": 0,
+					"type": "INTERVAL",
+					"options": [
+						{
+							"max": 10,
+							"min": 0
+						}
+					]
+				},
+				{
+					"id": "decpreccurrency",
+					"label": "Currency default Decimal Precision",
+					"defaultValue": 2,
+					"type": "INTERVAL",
+					"options": [
+						{
+							"max": 10,
+							"min": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dateformat",
+			"label": "Date Formats",
+			"elements": [
+				{
+					"id": "yearformat",
+					"label": "Year Format",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "numeric",
+					"options": [
+						{
+							"label": "numeric",
+							"value": "numeric"
+						},
+						{
+							"label": "2-digit",
+							"value": "2-digit"
+						}
+					]
+				},
+				{
+					"id": "monthformat",
+					"label": "Month Format",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "short",
+					"options": [
+						{
+							"label": "numeric",
+							"value": "numeric"
+						},
+						{
+							"label": "2-digit",
+							"value": "2-digit"
+						},
+						{
+							"label": "long",
+							"value": "long"
+						},
+						{
+							"label": "short",
+							"value": "short"
+						},
+						{
+							"label": "narrow",
+							"value": "narrow"
+						}
+					]
+				},
+				{
+					"id": "dayformat",
+					"label": "Day Format",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "numeric",
+					"options": [
+						{
+							"label": "numeric",
+							"value": "numeric"
+						},
+						{
+							"label": "2-digit",
+							"value": "2-digit"
+						}
+					]
+				},
+				{
+					"id": "weekdayformat",
+					"label": "Weekday Format",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "long",
+					"options": [
+						{
+							"label": "long",
+							"value": "long"
+						},
+						{
+							"label": "short",
+							"value": "short"
+						},
+						{
+							"label": "narrow",
+							"value": "narrow"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "comparisonsettings",
+			"label": "Comparison Settings",
+			"elements": [
+				{
+					"id": "compmetric",
+					"label": "Select default Comparison Metric in Chart",
+					"type": "SELECT_SINGLE",
+					"defaultValue": "relative",
+					"options": [
+						{ "label": "Comparison Values", "value": "value" },
+						{ "label": "Relative Change", "value": "relative" },
+						{ "label": "Absolute Change", "value": "absolute" }
+					]
+				},
+				{
+					"id": "bothdata",
+					"label": "Show Rows that exist BOTH in default & comparison period",
+					"defaultValue": true,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "newdata",
+					"label": "Show Rows that exist ONLY in DEFAULT period (new data)",
+					"defaultValue": true,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "lostdata",
+					"label": "Show Rows that exist ONLY in COMPARISON period (lost data)",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "textcompmissing",
+					"label": "Show Missing Comparison Values as",
+					"defaultValue": "-",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "comparrows",
+					"label": "Show Arrows for Comparison Numbers",
+					"type": "SELECT_RADIO",
+					"defaultValue": "after",
+					"options": [
+						{ "label": "hide", "value": "none" },
+						{ "label": "before", "value": "before" },
+						{ "label": "after", "value": "after" }
+					]
+				}
+			]
+		},
+
+		{
+			"id": "advanced",
+			"label": "ADVANCED CONFIGURATION",
+			"elements": [
+				{
+					"id": "advconfigmode",
+					"label": "Show CONFIG MODE (Recommended for advanced Configuration)",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "advusage",
+					"label": "Use Advanced Config based on: ",
+					"type": "SELECT_RADIO",
+					"defaultValue": "name",
+					"options": [
+						{ "label": "Field-Names", "value": "name" },
+						{ "label": "Field-IDs", "value": "id" }
+					]
+				},
+				{
+					"id": "advcss",
+					"label": "Add CSS Rules",
+					"type": "TEXTAREA",
+					"defaultValue": ""
+				},
+				{
+					"id": "advcolumns",
+					"label": "Display Custom COLUMNS (Comma-separated)",
+					"type": "TEXTAREA",
+					"defaultValue": ""
+				},
+				{
+					"id": "advnames",
+					"label": "NAME OVERRIDING. Column Names (JSON input)",
+					"type": "TEXTAREA",
+					"defaultValue": ""
+				},
+				{
+					"id": "advdecprec",
+					"label": "DECIMAL PRECISION for Fields(JSON input)",
+					"type": "TEXTAREA",
+					"defaultValue": ""
+				},
+				{
+					"id": "advgrouping",
+					"label": "METRIC GROUPING THRESHOLDS (JSON Arrays)",
+					"type": "TEXTAREA",
+					"defaultValue": ""
+				},
+				{
+					"id": "advdistrbars",
+					"label": "Show Distribution Bar Charts in Table Header based on Metric Grouping Treshholds",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				}
+			]
+		},
+
+		{
+			"id": "sorting",
+			"label": "ADVANCED: OVERRIDE SORTING",
+			"elements": [
+				{
+					"id": "sortingfield",
+					"label": "Field Name for new Sorting",
+					"type": "TEXTINPUT",
+					"defaultValue": ""
+				},
+				{
+					"id": "sortingdirection",
+					"label": "Sorting Direction",
+					"type": "SELECT_RADIO",
+					"defaultValue": "desc",
+					"options": [
+						{ "label": "asc", "value": "asc" },
+						{ "label": "desc", "value": "desc" }
+					]
+				},
+				{
+					"id": "weightedsort",
+					"label": "Enable WEIGHTED SORT.(for Rates and Mean) Based on:",
+					"type": "CHECKBOX",
+					"defaultValue": false
+				},
+				{
+					"id": "weightedsortfield",
+					"label": "Field Name for Base of Weight",
+					"type": "TEXTINPUT",
+					"defaultValue": ""
+				}
+			]
+		},
+		{
+			"id": "toprow",
+			"label": "TOP & BOTTOM ROW CONFIGURATION",
+			"elements": [
+				{
+					"id": "toprowlayout",
+					"label": "TOP ROW Elements",
+					"defaultValue": "",
+					"type": "TEXTAREA"
+				},
+				{
+					"id": "toprowfloat",
+					"label": "Top Row Position",
+					"type": "SELECT_RADIO",
+					"defaultValue": "left",
+					"options": [
+						{ "label": "left", "value": "left" },
+						{ "label": "right", "value": "right" },
+						{ "label": "evenly", "value": "inherit" }
+					]
+				},
+				{
+					"id": "bottomrowlayout",
+					"label": "BOTTOM ROW Elements",
+					"defaultValue": "{info}{pager}",
+					"type": "TEXTAREA"
+				},
+				{
+					"id": "bottomrowfloat",
+					"label": "Bottom Row Position",
+					"type": "SELECT_RADIO",
+					"defaultValue": "right",
+					"options": [
+						{ "label": "left", "value": "left" },
+						{ "label": "right", "value": "right" },
+						{ "label": "evenly", "value": "inherit" }
+					]
+				},
+				{
+					"id": "fontsizetop",
+					"label": "Table Top Row Font Size",
+					"defaultValue": 12,
+					"type": "FONT_SIZE"
+				},
+				{
+					"id": "fontsizebottom",
+					"label": "Table Bottom Row Font Size",
+					"defaultValue": 12,
+					"type": "FONT_SIZE"
+				},
+				{
+					"id": "pagernextprev",
+					"label": "Show next and prev Link for {pager}",
+					"defaultValue": true,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "pagerfirstlast",
+					"label": "Show first and last Link for {pager}",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "pagernumbers",
+					"label": "Show Number Links for {pager}",
+					"defaultValue": false,
+					"type": "CHECKBOX"
+				},
+
+				{
+					"id": "pagertruncate",
+					"label": "Truncate {pager} Number Links",
+					"defaultValue": true,
+					"type": "CHECKBOX"
+				},
+				{
+					"id": "pagerdelta",
+					"label": "{pager} Delta: Pages before & after active",
+					"defaultValue": 2,
+					"type": "INTERVAL",
+					"options": [
+						{
+							"max": 7,
+							"min": 0
+						}
+					]
+				},
+				{
+					"id": "perPageSelect",
+					"label": "{select} Values",
+					"defaultValue": "10, 50, 100, 500, 1000, 5000",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "pagerperPage",
+					"label": "Text for {select}",
+					"defaultValue": "{select} entries per page",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "pagerinfo",
+					"label": "Text for {info}",
+					"defaultValue": "{start} - {end} / {rows}",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "pagerinfofilter",
+					"label": "Text for {info} when Searched",
+					"defaultValue": " (filtered from {rowsTotal})",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "pagersearch",
+					"label": "Text for {search} Field",
+					"defaultValue": "Search...",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "textdateinfo",
+					"label": "Text for {date}",
+					"defaultValue": "{startdate} - {enddate}",
+					"type": "TEXTINPUT"
+				},
+				{
+					"id": "textdateinfocomp",
+					"label": "{date} Field Addon Text for Comparison ",
+					"defaultValue": " compared to {startdate_comp} - {enddate_comp}",
+					"type": "TEXTINPUT"
+				}
+			]
+		}
+	],
+	"interactions": [
+		{
+			"id": "crossfilter",
+			"supportedActions": ["FILTER"]
+		}
+	],
+	"features": {
+		"enableComparisonDateRange": true
+	}
+}

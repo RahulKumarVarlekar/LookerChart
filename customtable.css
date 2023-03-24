@@ -1,0 +1,459 @@
+/*!
+ * JSTable
+ */
+
+ .dt-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: hidden
+}
+
+#customtable {
+  display:block;
+  width:100%;
+  overflow-y:hidden;
+  overflow-x: visible;
+  }
+  #customtable[transpose="false"] tbody:hover {
+    overflow-y:auto;
+  } 
+  #customtable[transpose="true"]:hover {
+    overflow-y:auto;
+  } 
+  #customtable[transpose="true"] tbody{
+    overflow-x:auto;
+  }
+
+  thead, tbody {
+    display:block;
+    width:fit-content
+  }
+  tbody {
+  
+    scrollbar-gutter: stable;
+    overflow: hidden;
+
+  }
+#customtable[transpose="false"] th {
+position:sticky;
+top:0
+}
+
+
+.dt-container .dt-message {
+  text-align: center
+}
+
+.dt-container .dt-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+  margin-top: -20px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%)
+}
+
+.dt-top, .dt-bottom {
+  display: flex;
+  justify-content: space-between
+}
+
+.dt-bottom div:not(.dt-pagination), .dt-bottom div.dt-pagination ul li {
+  padding-top: 8px;
+}
+.dt-pagination:only-child {
+  margin-left: auto;
+}
+.dt-top div {
+  padding-bottom: 8px
+}
+.dt-bottom div, .dt-top div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*
+.dt-bottom {
+  max-height: 49px; 
+
+    overflow-y: scroll;
+
+}
+  */
+.dt-top select.dt-selector,.dt-bottom select.dt-selector {
+  padding: 6px;
+  background-color: transparent;
+  color:var(--fontcolor);
+  border:2px solid  #CCCCCC40
+
+}
+select option {
+  background-color: #CCCCCC40;
+  color:#000
+}
+.dt-input {
+  background-color: #ffffff00;
+  color:var(--fontcolor);
+  border:2px solid  #CCCCCC40
+  
+
+}
+.dt-top .dt-info,.dt-bottom .dt-info, .dt-top .dt-date, .dt-bottom .dt-date {
+  margin: 7px 0
+}
+
+.dt-input {
+  padding: 6px 12px
+}
+
+.dt-pagination ul {
+  margin: 0;
+  padding-left: 0
+}
+
+.dt-pagination ul li {
+  list-style: none;
+  float: left
+}
+
+.dt-pagination a,.dt-pagination span {
+  border: 1px solid transparent;
+  float: left;
+  margin-left: 2px;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+  color: inherit
+}
+
+.dt-pagination a:hover {
+  background-color: var(--accentcolor)
+}
+
+.dt-pagination .active a,.dt-pagination .active a:focus,.dt-pagination .active a:hover {
+  background-color: var(--accentcolor);
+  cursor: default
+}
+
+.dt-pagination .dt-ellipsis span {
+  cursor: not-allowed
+}
+
+.dt-pagination .disabled a,.dt-pagination .disabled a:focus,.dt-pagination .disabled a:hover {
+  cursor: not-allowed;
+  opacity: 0.4
+}
+
+.dt-pagination .pager a {
+  font-weight: bold
+}
+
+th , td {
+  vertical-align: middle;
+}
+.dt-table {
+  max-width: 100%;
+  width: 100%;
+  border-spacing: 0
+}
+
+.dt-table>tbody>tr>td,.dt-table>tbody>tr>th,.dt-table>tfoot>tr>td,.dt-table>tfoot>tr>th,.dt-table>thead>tr>td, .dt-table>thead>tr>th {
+  padding: 8px 10px 8px 6px;
+  /*white-space: nowrap*/
+}
+
+.dt-table>thead>tr th {
+  padding: 6px 11px 6px 6px;
+}
+table[transpose="true"].dt-table>thead>tr th {
+  padding: 8px 15px 8px 5px;
+}
+.dt-table>thead>tr th:last-child{
+  padding-right:21px;
+}
+
+
+
+.dt-table>tfoot>tr>th,.dt-table>tfoot>tr>td {
+  text-align: left;
+  border-top: 1px solid var(--gridcolor)
+}
+
+
+
+.dt-table th.dt-sorter {
+  position: relative;
+  cursor: pointer;
+}
+
+.dt-table th.dt-sorter::before,.dt-table th.dt-sorter::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: 3px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  opacity: 0.2
+}
+
+.dt-table th.dt-sorter::before {
+  /*border-top: 4px solid #000;*/
+  top: 50%;
+  margin-top: 2px;
+}
+
+.dt-table th.dt-sorter::after {
+  /*border-bottom: 4px solid #000;*/
+  border-top: 4px solid transparent;
+  bottom: 50%;
+  margin-bottom: 2px;
+}
+
+.dt-table th.dt-sorter.asc::after,.dt-table th.dt-sorter.desc::before {
+  opacity: 0.6
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0 !important
+}
+.dt-bottom *:only-child{
+
+    margin-left: auto;
+
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+#customtable[transpose="false"] tbody::-webkit-scrollbar {
+   width: 0px;
+   height: 8px
+ }
+ #customtable[transpose="false"] tbody:hover::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+
+#customtable[transpose="false"] tbody tr::after {
+  content: "\00a0";
+  width: 8px;
+  display: inline-block;
+
+}
+ 
+
+#customtable[transpose="false"] tbody:hover tr::after {
+  width: 0px;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999; 
+}
+
+
+/*CONFIG MODE STYLES
+*/
+
+#available {
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+}
+
+#available div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;}
+
+#available span {
+  font-weight: bold;
+  }
+#available ul {
+  margin: 0!important;
+  list-style: none;
+  padding-inline-start: 0;
+}
+.dt-top.configmode{
+  display: block;
+  font-size: 12px;
+}
+.dt-top.configmode div {
+ padding:3px
+}
+.dt-top.configmode h3, #defaultfields{
+margin: 0;
+}
+
+table#errortable {
+  color: rgb(87, 0, 0);
+  background: #ddd;
+}
+
+
+/*
+table[configmode="true"] td[data-value]:before {
+	content: attr(data-class);
+	visibility:visible;
+	font-size: 12px;
+    letter-spacing: normal;
+    text-align: left!important;
+    display: block;
+    margin-top: 10px;
+} 
+table[configmode="true"] td[data-value]:after {
+	content: "data-value= "attr(data-value);
+	visibility:visible;
+	font-size: 12px;
+    letter-spacing: normal;
+    text-align: left!important;
+    display: block;
+    margin-bottom: 10px;
+    
+
+}
+
+table[configmode="true"] td[data-value] {
+  font-size: 0px;
+  letter-spacing: -1px;
+  border-bottom: 3px solid #aaa;
+}
+
+*/
+
+table[configmode="true"] td[data-value] {
+  border-bottom: 2px solid #aaa;
+}
+table[configmode="true"][transpose="true"] th {
+  border-bottom: 2px solid #aaa;
+}
+
+tr[filter=off] {
+  opacity: 50%;
+}
+
+tr[filter=on] {
+  font-weight: bold;
+}
+
+
+/* transpose */
+
+table#customtable[transpose="true"] {
+  display: grid;
+ /* grid-template-columns: max-content min-content;*/
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "head body";
+  width: 100%;
+}
+table#customtable[transpose="true"]  thead  {
+ grid-area: head;
+ display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+  width: 100%;
+  }
+ 
+ table#customtable[transpose="true"]   tr {
+ display: flex;
+ flex-direction: column;
+ min-width: min-content;
+ flex-shrink: 0; 
+ flex-grow: 1;
+ }
+
+ table#customtable[transpose="true"]  tbody {
+grid-area: body;
+ display: flex;
+ width: 100%;
+ }
+ table#customtable[transpose="true"] td, table#customtable[transpose="true"] th  {
+   display: block;
+ }
+ table#customtable[transpose="true"] th:not(.dimension) {
+  font-weight:normal
+}
+table#customtable[transpose="true"] th.dimension, table#customtable[transpose="true"] td.dimension {
+  font-weight:bold
+}
+#customtable[transpose="true"] th {
+  position:sticky;
+  left:0
+  }
+table#customtable {
+  border-collapse: collapse;}
+
+  
+  /*  distribution Bar Styling  */
+  #customtable[transpose="false"] th .distrbars {
+
+    font-size:10px;
+    font-weight: normal;
+    padding:3px 0px 3px 0;
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 1px 4px;
+}
+#customtable[transpose="true"] th div.distrbars {
+  display: none;
+}
+
+#customtable[transpose="false"] .distrbarval {
+ background:linear-gradient(90deg, 
+ rgba(var(--fontcolorRGB),0.3) calc(var(--distrval) / var(--distrmaxval) * 100%),
+#FFFFFF00 calc(var(--distrval) / var(--distrmaxval) * 100%)
+);
+ text-align:right;
+ padding-right:3px;
+ mix-blend-mode: hard-light;
+ }
+ img {
+  width: 100%;
+}
+
+
+ #loaders {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #777; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  position:absolute;
+  z-index:999; 
+  top:calc(50% - 40px);
+  left:calc(50% - 40px)
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

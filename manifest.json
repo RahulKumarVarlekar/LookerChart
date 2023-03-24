@@ -1,0 +1,25 @@
+{
+	"name": "CustomTable",
+	"logoUrl": "https://storage.googleapis.com/customtable/logo.png",
+	"organization": "Thomas Langnau",
+	"supportUrl": "https://datastudio.google.com/reporting/ff79a3a6-4f5c-4a45-9363-63869d84913f/page/p_ek4ywrknrc",
+	"packageUrl": "https://datastudio.google.com/reporting/ff79a3a6-4f5c-4a45-9363-63869d84913f",
+	"privacyPolicyUrl": "https://datastudio.google.com/reporting/ff79a3a6-4f5c-4a45-9363-63869d84913f/page/p_h31a8cknrc",
+	"termsOfServiceUrl": "https://datastudio.google.com/reporting/ff79a3a6-4f5c-4a45-9363-63869d84913f/page/p_h31a8cknrc",
+	"organizationUrl": "https://mohrstade.com/",
+	"description": "Hosted Version of CustomTable",
+	"devMode": false,
+	"components": [
+		{
+			"id": "table",
+			"name": "HOSTED CustomTable",
+			"iconUrl": "https://storage.googleapis.com/customtable/logo.png",
+			"description": "Hosted Version of CustomTable",
+			"resource": {
+				"js": "./customtable.js",
+				"config": "./customtable.json",
+				"css": "./customtable.css"
+			}
+		}
+	]
+}
